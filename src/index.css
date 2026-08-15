@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* The page's own visual language lives in the scoped stylesheet inside
+   NayabBirthday.jsx. This file only resets the shell around it. */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: #2B1526;
+}
+body {
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+}
