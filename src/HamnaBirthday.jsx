@@ -881,108 +881,164 @@ function DollA({ className = "", ...rest }) {
     <svg viewBox="0 0 130 320" className={`hm-doll hm-doll-a ${className}`}
       fill="none" aria-hidden="true" {...rest}>
     <defs>
-    <linearGradient id="aGown" x1=".15" y1="0" x2=".9" y2="1">
-      <stop offset="0" stopColor="#FFF0F5"/><stop offset=".28" stopColor="#FBD3E2"/>
-      <stop offset=".62" stopColor="#E28FAE"/><stop offset="1" stopColor="#A8567C"/>
-    </linearGradient>
-    <linearGradient id="aBodice" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stopColor="#C46E92"/><stop offset=".4" stopColor="#F3B7CD"/>
-      <stop offset="1" stopColor="#B0648A"/>
-    </linearGradient>
-    <linearGradient id="aHair" x1=".2" y1="0" x2=".8" y2="1">
-      <stop offset="0" stopColor="#3B2130"/><stop offset=".55" stopColor="#5E3446"/>
-      <stop offset="1" stopColor="#8E4756"/>
-    </linearGradient>
-    <linearGradient id="aSkin" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stopColor="#DDA890"/><stop offset=".45" stopColor="#F4CDB8"/>
-      <stop offset="1" stopColor="#E0AF97"/>
-    </linearGradient>
-    <linearGradient id="aSleeve" x1=".2" y1="0" x2=".8" y2="1">
-      <stop offset="0" stopColor="#FBD3E2"/><stop offset="1" stopColor="#C46E92"/>
-    </linearGradient>
-  </defs>
+  <linearGradient id="aGown" x1=".15" y1="0" x2=".9" y2="1">
+    <stop offset="0" stopColor="#FFF3F7"/><stop offset=".3" stopColor="#FBD3E2"/>
+    <stop offset=".68" stopColor="#E28FAE"/><stop offset="1" stopColor="#A8567C"/>
+  </linearGradient>
+  <linearGradient id="aBodice" x1="0" y1="0" x2="1" y2=".3">
+    <stop offset="0" stopColor="#B0648A"/><stop offset=".42" stopColor="#F3B7CD"/>
+    <stop offset="1" stopColor="#C46E92"/>
+  </linearGradient>
+  <linearGradient id="aHair" x1=".15" y1="0" x2=".85" y2="1">
+    <stop offset="0" stopColor="#4A2334"/><stop offset=".5" stopColor="#6B3648"/>
+    <stop offset="1" stopColor="#95505F"/>
+  </linearGradient>
+  <linearGradient id="aHairBack" x1=".2" y1="0" x2=".8" y2="1">
+    <stop offset="0" stopColor="#3A1D2A"/><stop offset="1" stopColor="#5E3446"/>
+  </linearGradient>
+  <linearGradient id="aSkin" x1=".1" y1="0" x2=".9" y2=".4">
+    <stop offset="0" stopColor="#FBE0CF"/><stop offset=".5" stopColor="#F5CDB4"/>
+    <stop offset="1" stopColor="#E3B197"/>
+  </linearGradient>
+  <linearGradient id="aSleeve" x1=".2" y1="0" x2=".8" y2="1">
+    <stop offset="0" stopColor="#FBD9E6"/><stop offset="1" stopColor="#C46E92"/>
+  </linearGradient>
+</defs>
 
-  {/* train */}
-  <path d="M62 214c-14 24-34 40-48 72 20 10 44 12 62 8-6-26-8-54-14-80z"
-    fill="url(#aGown)" opacity=".5" stroke="#5E2A4A" strokeWidth="1" strokeOpacity=".35"/>
-  {/* mermaid skirt */}
-  <path d="M53 186h22c5 22 4 40 2 56 10 12 16 30 18 48-22 7-48 7-70 1 4-19 12-36 24-49-1-18-1-36 4-56z"
-    fill="url(#aGown)" stroke="#5E2A4A" strokeWidth="1.2" strokeLinejoin="round"/>
-  <path d="M60 196c-3 20-4 38-2 52-8 12-14 26-17 40" stroke="#FFF6FA" strokeWidth="1.5" strokeLinecap="round" opacity=".5"/>
-  <path d="M70 198c2 18 3 34 2 48 6 12 11 26 13 40" stroke="#8E4756" strokeWidth="1" strokeLinecap="round" opacity=".22"/>
-  <path d="M66 250c-6 10-10 22-12 34" stroke="#FFF6FA" strokeWidth="1" strokeLinecap="round" opacity=".35"/>
-  <path d="M27 288c20 8 46 8 68 0" stroke="#A8567C" strokeWidth="2" opacity=".25"/>
+{/* hair back mass, behind everything */}
+<path d="M65 20c22 0 34 15 33.5 35-.3 12-3 20-2.4 30 .9 16-1.2 31-6.4 44-3.4-10-7.4-17-12.6-21.6
+  4.6-16 4.6-34-1.7-45.4C71.8 53.4 68.9 51 65 51s-6.8 2.4-10.4 11c-6.3 11.4-6.3 29.4-1.7 45.4
+  -5.2 4.6-9.2 11.6-12.6 21.6-5.2-13-7.3-28-6.4-44 .6-10-2.1-18-2.4-30C31 35 43 20 65 20z"
+  fill="url(#aHairBack)" stroke="#331925" strokeWidth="1.1" strokeLinejoin="round"/>
 
-  {/* ARMS (filled, tapered, anchored under the bodice/sleeve) */}
-  <g>
-    {/* left arm: bends in, hand resting at the waist */}
-    <path d="M50 130.5C43 136 38.5 146 39 160c.3 9.5 3.8 17.5 10 23l3.6-4.6
-      C47.4 173.6 45.3 168 45.2 160c-.2-10 3.2-18.6 10.6-23.6z"
-      fill="url(#aSkin)" stroke="#A8695A" strokeWidth=".9" strokeLinejoin="round"/>
-    <path d="M49 183.5l3.6-4.6c4.2 2.6 6 6.1 4.4 9-1.6 2.6-5.6 1.9-8-.4z"
-      fill="#F4CDB8" stroke="#A8695A" strokeWidth=".9" strokeLinejoin="round"/>
-    <path d="M47.6 149.5c-3 4.8-4.2 10-4 15.4" stroke="#A8695A" strokeWidth=".8" opacity=".45" strokeLinecap="round"/>
-    <g className="hm-doll-arm">
-      {/* right arm: falls at the side, slight outward bow */}
-    <path d="M80 130.5C87.5 136 91.6 146 91 160.5c-.4 10.6-1.8 19.3-4.2 27.6l-5.9-1.1
-      c2-8.3 3.4-16.4 3.8-26.5.4-10.6-3-18.9-10.3-23.6z"
-      fill="url(#aSkin)" stroke="#A8695A" strokeWidth=".9" strokeLinejoin="round"/>
-    <path d="M80.9 187l5.9 1.1c1.4 4.4.4 9.3-2.5 9.8-2.9.5-4.5-2.9-4.3-6.3z"
-      fill="#F4CDB8" stroke="#A8695A" strokeWidth=".9" strokeLinejoin="round"/>
-    <path d="M84.6 149.5c2.2 4.7 3 9.8 2.7 15.2" stroke="#A8695A" strokeWidth=".8" opacity=".45" strokeLinecap="round"/>
-    </g>
+{/* train pooling behind the hem */}
+<path d="M58 200c-8 26-22 46-34 62-5 7-3 12 6 14 16 3.5 33 3 47-1-9-24-15-49-19-75z"
+  fill="url(#aGown)" opacity=".5" stroke="#5E2A4A" strokeWidth="1" strokeOpacity=".32" strokeLinejoin="round"/>
+<path d="M52 218c-6 18-16 33-26 45" stroke="#FFF6FA" strokeWidth="1.2" strokeLinecap="round" opacity=".3"/>
+
+{/* mermaid skirt */}
+<path d="M52 154h26c5 25 5 47 3 66 12 14 18 34 20 55-25 8-55 8-80 1 4-22 14-42 26-56-2-21-2-44 5-66z"
+  fill="url(#aGown)" stroke="#5E2A4A" strokeWidth="1.2" strokeLinejoin="round"/>
+<path d="M60 167c-3 23-4 44-2 59-9 14-16 30-19 46" stroke="#FFF6FA" strokeWidth="1.6" strokeLinecap="round" opacity=".55"/>
+<path d="M72 169c2 21 3 40 2 55 7 14 13 30 15 46" stroke="#8E4756" strokeWidth="1" strokeLinecap="round" opacity=".2"/>
+<path d="M66 226c-6 12-11 25-13 38" stroke="#FFF6FA" strokeWidth="1" strokeLinecap="round" opacity=".35"/>
+<path d="M27 268c21 8 50 8 72 0" stroke="#A8567C" strokeWidth="2" opacity=".22"/>
+
+{/* NECK — before the chest, so the chest closes its base */}
+<path d="M58.4 62.0h13.2v10c0 4.2-2.8 8-6.6 8s-6.6-3.8-6.6-8z"
+  fill="#EDBFA4"/>
+<path d="M58.4 62.0v10c0 4.2 2.8 8 6.6 8s6.6-3.8 6.6-8v-10"
+  fill="none" stroke="#B5806B" strokeWidth=".9" strokeLinecap="round"/>
+<path d="M59.4 63.5c3.4 4.6 7.8 4.6 11.2 0" fill="none" stroke="#B5806B"
+  strokeWidth=".9" opacity=".45" strokeLinecap="round"/>
+
+{/* chest + shoulders, sloping */}
+<path d="M54 73h22c7 4 11.5 11 12.5 20 .7 6.5.5 14-.4 21H41.9c-.9-7-1.1-14.5-.4-21 1-9 5.5-16 12.5-20z"
+  fill="url(#aSkin)" stroke="#B5806B" strokeWidth=".9" strokeLinejoin="round"/>
+<path d="M56 92c5.5 3.5 12.5 3.5 18 0" stroke="#B5806B" strokeWidth=".8" opacity=".3" strokeLinecap="round"/>
+
+{/* sash */}
+<path d="M50 149h30l-1.3 8H51.3z" fill="#C3A4E4" stroke="#9B78C6" strokeWidth=".7" strokeLinejoin="round"/>
+<path d="M78 157c5 11 5 24 2 35" stroke="#C3A4E4" strokeWidth="3" strokeLinecap="round" opacity=".8"/>
+<circle cx="79.5" cy="153" r="3" fill="#EBD9F7"/>
+
+{/* ARMS — hands finish tucked at the hip */}
+<g>
+  <path d="M48 94c-8.5 6-13.5 16.5-13 30 .4 11 3.6 20 9 27.5l5.6-3.8
+    c-4.4-6.4-7-13.8-7.3-23.4-.3-10 2.2-18.2 7-24z"
+    fill="url(#aSkin)" stroke="#B5806B" strokeWidth=".9" strokeLinejoin="round"/>
+  <path d="M44 155.5l5.6-3.8c3.8 3.3 5.3 7.4 3.8 11-1.6 3.8-6 4.6-8.9 1.8-2.3-2.1-2.7-5.6-.5-9z"
+    fill="#FBE0CF" stroke="#B5806B" strokeWidth=".9" strokeLinejoin="round"/>
+  <path d="M45 118c-2.4 5.6-3.2 11.4-2.6 17.2" stroke="#B5806B" strokeWidth=".8" opacity=".4" strokeLinecap="round"/>
+  <g className="hm-doll-arm">
+    <path d="M82 94c8.5 6 13.5 16.5 13 30-.4 11-3.6 20-9 27.5l-5.6-3.8
+      c4.4-6.4 7-13.8 7.3-23.4.3-10-2.2-18.2-7-24z"
+      fill="url(#aSkin)" stroke="#B5806B" strokeWidth=".9" strokeLinejoin="round"/>
+    <path d="M86 155.5l-5.6-3.8c-3.8 3.3-5.3 7.4-3.8 11 1.6 3.8 6 4.6 8.9 1.8 2.3-2.1 2.7-5.6.5-9z"
+      fill="#FBE0CF" stroke="#B5806B" strokeWidth=".9" strokeLinejoin="round"/>
+    <path d="M85 118c2.4 5.6 3.2 11.4 2.6 17.2" stroke="#B5806B" strokeWidth=".8" opacity=".4" strokeLinecap="round"/>
   </g>
+</g>
 
-  {/* sash */}
-  <path d="M50 180h28l-1.5 8H51z" fill="#C3A4E4"/>
-  <path d="M76 188c5 10 5 22 2 32" stroke="#C3A4E4" strokeWidth="3" strokeLinecap="round" opacity=".85"/>
-  <circle cx="78" cy="184" r="3.2" fill="#EBD9F7"/>
+{/* bodice, sweetheart neckline */}
+<path d="M47 93c3.5-4 8-6.5 13-7 1.8 3 3.5 4.5 5 4.5s3.2-1.5 5-4.5c5 .5 9.5 3 13 7
+  1 15-1 28-5 39 1.4 8 2.2 15.7 2.4 22.5H51.6c.2-6.8 1-14.5 2.4-22.5-4-11-6-24-5-39z"
+  fill="url(#aBodice)" stroke="#5E2A4A" strokeWidth="1.1" strokeLinejoin="round"/>
+<path d="M56 102c-1.6 19-1.4 39 .5 56" stroke="#FFF6FA" strokeWidth="1" opacity=".4"/>
+<path d="M74 102c1.6 19 1.4 39-.5 56" stroke="#8E4756" strokeWidth="1" opacity=".28"/>
+<circle cx="59" cy="122" r="1.5" fill="#FFF6FA" opacity=".85"/>
+<circle cx="71" cy="131" r="1.5" fill="#FFF6FA" opacity=".7"/>
+<circle cx="63" cy="141" r="1.4" fill="#FFF6FA" opacity=".6"/>
 
-  {/* bodice */}
-  <path d="M53 128c4 5 10 7 12 7s8-2 12-7c4 16 5 34 3 52H50c-2-18-1-36 3-52z"
-    fill="url(#aBodice)" stroke="#5E2A4A" strokeWidth="1.1" strokeLinejoin="round"/>
-  <path d="M57 140c-1 14-1 28 0 40" stroke="#FFF6FA" strokeWidth="1" opacity=".38"/>
-  <path d="M73 141c1 13 1 26 0 38" stroke="#8E4756" strokeWidth="1" opacity=".3"/>
-  <circle cx="61" cy="150" r="1.5" fill="#FFF6FA" opacity=".85"/>
-  <circle cx="69" cy="158" r="1.5" fill="#FFF6FA" opacity=".7"/>
-  <circle cx="64" cy="168" r="1.4" fill="#FFF6FA" opacity=".6"/>
+{/* puff sleeves, painted after the arms so the joint never opens */}
+<path d="M59.5 90c-7.5-1.8-14 .8-17.5 7-2 3.6-.4 7.4 3.4 8.2 3.4.8 5.8-.7 7.2-3.6 1.8-4 4.3-7.2 7.9-9.4z"
+  fill="url(#aSleeve)" stroke="#5E2A4A" strokeWidth="1" strokeLinejoin="round"/>
+<path d="M70.5 90c7.5-1.8 14 .8 17.5 7 2 3.6.4 7.4-3.4 8.2-3.4.8-5.8-.7-7.2-3.6-1.8-4-4.3-7.2-7.9-9.4z"
+  fill="url(#aSleeve)" stroke="#5E2A4A" strokeWidth="1" strokeLinejoin="round"/>
 
-  {/* SLEEVE CAPS — drawn after the arms so the shoulder joint is always covered */}
-  <path d="M58 127.5c-5.6-4.2-13-3.2-16.3 2.4-2.3 4.2-.9 9.3 3.3 11.2 4.7 1.9 10.7-.5 13-5.1z"
-    fill="url(#aSleeve)" stroke="#5E2A4A" strokeWidth="1" strokeLinejoin="round"/>
-  <path d="M72 127.5c5.6-4.2 13-3.2 16.3 2.4 2.3 4.2.9 9.3-3.3 11.2-4.7 1.9-10.7-.5-13-5.1z"
-    fill="url(#aSleeve)" stroke="#5E2A4A" strokeWidth="1" strokeLinejoin="round"/>
-  <path d="M46.5 131c-2.3 2.3-3.2 5.6-2.2 8.4" stroke="#FFF6FA" strokeWidth="1" opacity=".5" strokeLinecap="round"/>
-  <path d="M83.5 131c2.3 2.3 3.2 5.6 2.2 8.4" stroke="#FFF6FA" strokeWidth="1" opacity=".45" strokeLinecap="round"/>
+<ellipse cx="65.0" cy="46.0" rx="19.0" ry="20.5" fill="url(#aSkin)"
+  stroke="#A56B57" strokeWidth="1.1"/>
+<ellipse cx="56.0" cy="48.0" rx="7" ry="9" fill="#FFF3EA" opacity=".18"/>
+<path d="M46.4 44.5c-2.6-.4-4.4 1.4-4.2 4 .2 2.6 2.2 4.6 4.8 4.8z"
+  fill="#EDBFA4" stroke="#A56B57" strokeWidth=".9" strokeLinejoin="round"/>
+<path d="M83.6 44.5c2.6-.4 4.4 1.4 4.2 4-.2 2.6-2.2 4.6-4.8 4.8z"
+  fill="#EDBFA4" stroke="#A56B57" strokeWidth=".9" strokeLinejoin="round"/>
+<ellipse cx="57.4" cy="49.5" rx="4.6" ry="5.4" fill="#FFFDFB"/>
+<circle cx="57.4" cy="50.0" r="3.5" fill="#8E4756"/>
+<circle cx="57.4" cy="50.4" r="1.75" fill="#3B2130"/>
+<circle cx="56.1" cy="47.9" r="1.45" fill="#FFFFFF"/>
+<circle cx="58.9" cy="51.9" r=".75" fill="#FFFFFF" opacity=".8"/>
+<path d="M52.5 48.1c1-3.2 3-4.8 4.9-4.8s3.9 1.6 4.9 4.8"
+  fill="none" stroke="#3B2130" strokeWidth="1.35" strokeLinecap="round"/>
+<ellipse cx="57.4" cy="49.5" rx="4.6" ry="5.4" fill="none"
+  stroke="#3B2130" strokeWidth=".65" opacity=".5"/>
+<ellipse cx="72.6" cy="49.5" rx="4.6" ry="5.4" fill="#FFFDFB"/>
+<circle cx="72.6" cy="50.0" r="3.5" fill="#8E4756"/>
+<circle cx="72.6" cy="50.4" r="1.75" fill="#3B2130"/>
+<circle cx="71.3" cy="47.9" r="1.45" fill="#FFFFFF"/>
+<circle cx="74.1" cy="51.9" r=".75" fill="#FFFFFF" opacity=".8"/>
+<path d="M67.69999999999999 48.1c1-3.2 3-4.8 4.9-4.8s3.9 1.6 4.9 4.8"
+  fill="none" stroke="#3B2130" strokeWidth="1.35" strokeLinecap="round"/>
+<ellipse cx="72.6" cy="49.5" rx="4.6" ry="5.4" fill="none"
+  stroke="#3B2130" strokeWidth=".65" opacity=".5"/>
+<path d="M53.1 41.4c1.5-2.2 3.3-3.1 5.2-2.7 1.4.3 2.6 1.2 3.5 2.5"
+  fill="none" stroke="#5E3446" strokeWidth="1.15" strokeLinecap="round" opacity=".9"/>
+<path d="M76.89999999999999 41.4c-1.5-2.2-3.3-3.1-5.2-2.7-1.4.3-2.6 1.2-3.5 2.5"
+  fill="none" stroke="#5E3446" strokeWidth="1.15" strokeLinecap="round" opacity=".9"/>
+<path d="M64.2 53.4c.8.7 1.6.8 2.4.2" fill="none" stroke="#B5806B"
+  strokeWidth=".9" strokeLinecap="round" opacity=".65"/>
+<path d="M62 58.2c1-.9 1.9-.9 3 .3 1.1-1.2 2-1.2 3-.3-.9 2.4-2 3.6-3 3.6s-2.1-1.2-3-3.6z"
+  fill="#D9718F"/>
+<path d="M62 58.2c2 .8 4 .8 6 0" fill="none" stroke="#8E4756"
+  strokeWidth=".6" opacity=".55" strokeLinecap="round"/>
+<ellipse cx="51.5" cy="54.5" rx="4.4" ry="2.8" fill="#E28FAE" opacity=".42"/>
+<ellipse cx="78.5" cy="54.5" rx="4.4" ry="2.8" fill="#E28FAE" opacity=".42"/>
 
-  {/* neck */}
-  <path d="M60.5 108h9v16c0 3-9 3-9 0z" fill="#E5B79F" stroke="#A8695A" strokeWidth=".9"/>
-  <path d="M61 112c2.5 3 6 3.5 8.5 2" stroke="#A8695A" strokeWidth=".8" opacity=".5"/>
+{/* hair front: soft centre part + framing waves */}
+<path d="M65 18c15 0 22 11 21 26.5-.2 4-.8 7-1.5 9.6-1-6.5-2-12-3.1-16.6
+  -6.5 3-12.1.6-16.4-6.6-4.3 5.6-9.9 9.6-16.4 6.6-1.1 4.6-2.1 10.1-3.1 16.6
+  -.7-2.6-1.3-5.6-1.5-9.6C43 29 50 18 65 18z"
+  fill="url(#aHair)" stroke="#331925" strokeWidth="1.1" strokeLinejoin="round"/>
+<path d="M45 46c-4.5 11-6 22.5-5 34 .8 9.5 3.2 17.5 7.2 23.8 1.1 1.7 3.4.5 3-1.5
+  -1.8-8.4-2.2-16.7-1.1-25 .9-6.8 2.1-21.6 3.1-29.2z"
+  fill="url(#aHair)" stroke="#331925" strokeWidth="1" strokeLinejoin="round"/>
+<path d="M85 46c4.5 11 6 22.5 5 34-.8 9.5-3.2 17.5-7.2 23.8-1.1 1.7-3.4.5-3-1.5
+  1.8-8.4 2.2-16.7 1.1-25-.9-6.8-2.1-21.6-3.1-29.2z"
+  fill="url(#aHair)" stroke="#331925" strokeWidth="1" strokeLinejoin="round"/>
+<path d="M46.5 56c-2.8 9-3.8 17.5-3 25.5" stroke="#C98A9B" strokeWidth=".9" strokeLinecap="round" opacity=".4"/>
+<path d="M83.5 56c2.8 9 3.8 17.5 3 25.5" stroke="#C98A9B" strokeWidth=".9" strokeLinecap="round" opacity=".4"/>
+<path d="M93 60c2 15 1.2 30-2.4 43" stroke="#B0648A" strokeWidth="1.3" strokeLinecap="round" opacity=".4"/>
+<path d="M37 60c-2 15-1.2 30 2.4 43" stroke="#B0648A" strokeWidth="1.3" strokeLinecap="round" opacity=".3"/>
+<path d="M65 21c6.5.6 11.4 3.6 14.6 8.6" stroke="#C98A9B" strokeWidth="1.1" strokeLinecap="round" opacity=".45"/>
 
-  {/* head, turned three-quarter right */}
-  <path d="M64 73.5c10 0 16 8 16 18.5 0 6.5-1.6 11.8-4.8 15.6-3 3.5-7 5.4-12.2 5.4-9.4 0-15.5-8.8-15.5-19.5S54.5 73.5 64 73.5z"
-    fill="url(#aSkin)" stroke="#5E2A4A" strokeWidth="1.1"/>
-  {/* face: brow, lash, lip, blush — on the exposed cheek so she reads as a
-       three-quarter profile rather than a blank head */}
-  <path d="M50.5 97.5c2.2-.7 4.1-.3 5.6 1.1" stroke="#5E3446" strokeWidth="1.3" strokeLinecap="round" opacity=".8"/>
-  <path d="M50 104.2c1.8-.6 3.4-.4 4.7.5" stroke="#3B2130" strokeWidth="1.2" strokeLinecap="round" opacity=".75"/>
-  <path d="M52.2 111.4c1.7.2 3.1-.2 4.1-1.3" stroke="#C46E92" strokeWidth="1.5" strokeLinecap="round"/>
-  <ellipse cx="54.5" cy="107.5" rx="3.4" ry="2.2" fill="#E28FAE" opacity=".32"/>
-  <path d="M48.6 100.6c-1.5 1.6-1.4 3.6.3 4.8" stroke="#A8695A" strokeWidth=".9" opacity=".6" strokeLinecap="round"/>
-  <path d="M51.5 115.5c3.4 2.2 7.4 2.2 10.5-.2" stroke="#A8695A" strokeWidth=".9" opacity=".45" strokeLinecap="round"/>
-
-  {/* hair: deep side part, long waves past the shoulder */}
-  <path d="M65 74c14 0 23 9 22 23-.5 8-3 13-3 20 2 16-2 32-9 44-3-16-8-24-15-29 5-11 5-23-1-30-6-6-13-5-18 2-2-18 8-30 24-30z"
-    fill="url(#aHair)" stroke="#3B2130" strokeWidth="1.1" strokeLinejoin="round"/>
-  <path d="M78 92c3 12 2 26-2 38" stroke="#B0648A" strokeWidth="1.4" strokeLinecap="round" opacity=".5"/>
-  <path d="M72 98c2 14 1 28-3 40" stroke="#B0648A" strokeWidth="1" strokeLinecap="round" opacity=".35"/>
-  <path d="M55 80c6-4 13-3.5 18 1.5" stroke="#8E4756" strokeWidth="1.2" strokeLinecap="round" opacity=".45"/>
-  <g>
-    <circle cx="55" cy="82" r="2.6" fill="#C3A4E4"/>
-    <circle cx="60" cy="79" r="2.2" fill="#D9BFF0"/>
-    <circle cx="57" cy="76" r="2" fill="#C3A4E4"/>
-    <circle cx="57.5" cy="79.5" r="1.2" fill="#FFF6FA"/>
-  </g>
+{/* lilac bloom */}
+<g>
+  <circle cx="45" cy="32" r="3.1" fill="#C3A4E4"/>
+  <circle cx="50.5" cy="28.2" r="2.7" fill="#D9BFF0"/>
+  <circle cx="46.6" cy="25.4" r="2.4" fill="#C3A4E4"/>
+  <circle cx="51.6" cy="33.4" r="2.2" fill="#D9BFF0"/>
+  <circle cx="48.2" cy="29.6" r="1.4" fill="#FFF6FA"/>
+</g>
     </svg>
   );
 }
@@ -992,117 +1048,168 @@ function DollB({ className = "", ...rest }) {
     <svg viewBox="0 0 130 320" className={`hm-doll hm-doll-b ${className}`}
       fill="none" aria-hidden="true" {...rest}>
     <defs>
-    <linearGradient id="bGown" x1=".1" y1="0" x2=".95" y2="1">
-      <stop offset="0" stopColor="#FFF4EF"/><stop offset=".3" stopColor="#FBD6C6"/>
-      <stop offset=".68" stopColor="#F4A088"/><stop offset="1" stopColor="#C96A55"/>
-    </linearGradient>
-    <linearGradient id="bBodice" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stopColor="#D9836B"/><stop offset=".42" stopColor="#FBC4AE"/>
-      <stop offset="1" stopColor="#C4735C"/>
-    </linearGradient>
-    <linearGradient id="bHair" x1=".2" y1="0" x2=".85" y2="1">
-      <stop offset="0" stopColor="#33203A"/><stop offset=".6" stopColor="#573A66"/>
-      <stop offset="1" stopColor="#7E5AA8"/>
-    </linearGradient>
-    <linearGradient id="bSkin" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stopColor="#DFAC95"/><stop offset=".45" stopColor="#F6D2C0"/>
-      <stop offset="1" stopColor="#E2B49E"/>
-    </linearGradient>
-    <linearGradient id="bSleeve" x1=".2" y1="0" x2=".8" y2="1">
-      <stop offset="0" stopColor="#FBD6C6"/><stop offset="1" stopColor="#D9836B"/>
-    </linearGradient>
-  </defs>
+  <linearGradient id="bGown" x1=".1" y1="0" x2=".95" y2="1">
+    <stop offset="0" stopColor="#FFF6F2"/><stop offset=".32" stopColor="#FBD6C6"/>
+    <stop offset=".7" stopColor="#F4A088"/><stop offset="1" stopColor="#C96A55"/>
+  </linearGradient>
+  <linearGradient id="bBodice" x1="0" y1="0" x2="1" y2=".3">
+    <stop offset="0" stopColor="#C2543C"/><stop offset=".44" stopColor="#F79877"/>
+    <stop offset="1" stopColor="#CB5F45"/>
+  </linearGradient>
+  <linearGradient id="bHair" x1=".15" y1="0" x2=".85" y2="1">
+    <stop offset="0" stopColor="#3B2647"/><stop offset=".5" stopColor="#573A66"/>
+    <stop offset="1" stopColor="#8A64B0"/>
+  </linearGradient>
+  <linearGradient id="bSkin" x1=".1" y1="0" x2=".9" y2=".4">
+    <stop offset="0" stopColor="#FBE2D1"/><stop offset=".5" stopColor="#F5D0B9"/>
+    <stop offset="1" stopColor="#E3B49B"/>
+  </linearGradient>
+  <linearGradient id="bSleeve" x1=".2" y1="0" x2=".8" y2="1">
+    <stop offset="0" stopColor="#F9B79D"/><stop offset="1" stopColor="#C2543C"/>
+  </linearGradient>
+</defs>
 
-  {/* legs + heels, tapered rather than stick strokes */}
-  <path d="M56.5 268h5.5c.3 8 .2 16-.6 24h-5c-.6-8-.5-16 .1-24z" fill="url(#bSkin)" stroke="#B07A63" strokeWidth=".9" strokeLinejoin="round"/>
-  <path d="M68 268h5.5c.5 8 .6 16 .1 24h-5c-.7-8-.9-16-.6-24z" fill="url(#bSkin)" stroke="#B07A63" strokeWidth=".9" strokeLinejoin="round"/>
-  <path d="M55.5 291h7.5l1 5.5c.2 1.4-.7 2.3-2.2 2.3h-6.5c-1.4 0-2.2-.9-2-2.3z" fill="#C96A55" stroke="#8E4A3C" strokeWidth=".8" strokeLinejoin="round"/>
-  <path d="M67 291h7.5l2.2 5.5c.5 1.4-.4 2.3-1.8 2.3h-6.5c-1.5 0-2.4-.9-2.4-2.3z" fill="#C96A55" stroke="#8E4A3C" strokeWidth=".8" strokeLinejoin="round"/>
+{/* legs + heels */}
+<path d="M55.8 252h7.4c.4 14 .2 28-.6 42h-6.4c-.8-14-.7-28-.4-42z"
+  fill="url(#bSkin)" stroke="#B5806B" strokeWidth=".9" strokeLinejoin="round"/>
+<path d="M66.8 252h7.4c.4 14 .6 28-.2 42h-6.4c-.8-14-1.1-28-.8-42z"
+  fill="url(#bSkin)" stroke="#B5806B" strokeWidth=".9" strokeLinejoin="round"/>
+<path d="M55.2 293h8.6l1.3 6.4c.3 1.7-.9 2.9-2.6 2.9h-7.3c-1.7 0-2.7-1.2-2.4-2.9z"
+  fill="#C96A55" stroke="#8E4A3C" strokeWidth=".8" strokeLinejoin="round"/>
+<path d="M66.6 293h8.6l2.7 6.4c.7 1.7-.5 2.9-2.2 2.9h-7.3c-1.8 0-2.8-1.2-2.6-2.9z"
+  fill="#C96A55" stroke="#8E4A3C" strokeWidth=".8" strokeLinejoin="round"/>
 
-  {/* three ruffled tiers */}
-  <path d="M52 182h26c6 11 9 21 9 30-15 7-34 7-49 1 1-10 5-20 14-31z" fill="url(#bGown)" stroke="#5E2A4A" strokeWidth="1.1" strokeLinejoin="round"/>
-  <path d="M40 210c17 8 34 8 51 1 5 12 7 22 6 31-21 8-45 8-65 1 1-11 4-21 8-33z" fill="url(#bGown)" opacity=".97" stroke="#5E2A4A" strokeWidth="1.1" strokeLinejoin="round"/>
-  <path d="M35 240c20 9 42 9 62 1 5 12 7 22 6 30-24 9-52 9-76 1 1-11 4-21 8-32z" fill="url(#bGown)" stroke="#5E2A4A" strokeWidth="1.1" strokeLinejoin="round"/>
-  <path d="M39 211c6 5 12 5 18 0s12 5 18 0 12 5 16 1" stroke="#FFF6F2" strokeWidth="1.5" opacity=".65"/>
-  <path d="M34 241c7 5 14 5 21 0s14 5 21 0 13 5 17 1" stroke="#FFF6F2" strokeWidth="1.5" opacity=".55"/>
-  <path d="M28 271c8 5 16 5 24 0s16 5 24 0 14 5 19 1" stroke="#FFF6F2" strokeWidth="1.5" opacity=".45"/>
-  <g fill="#FFF6F2" opacity=".5">
-    <circle cx="46" cy="256" r="1.4"/><circle cx="60" cy="262" r="1.4"/>
-    <circle cx="76" cy="256" r="1.4"/><circle cx="53" cy="272" r="1.3"/>
-    <circle cx="69" cy="272" r="1.3"/>
+{/* three ruffled tiers */}
+<path d="M49 150h32c7 13 10 24 10 33-17 8-39 8-55 1 1-11 5-23 13-34z"
+  fill="url(#bGown)" stroke="#5E2A4A" strokeWidth="1.1" strokeLinejoin="round"/>
+<path d="M38 182c18 9 37 9 54 1 5.5 14 7.5 25 6.5 35-22 9-48 9-69 1 1-12 4.5-24 8.5-37z"
+  fill="url(#bGown)" opacity=".97" stroke="#5E2A4A" strokeWidth="1.1" strokeLinejoin="round"/>
+<path d="M32 216c21 10 45 10 66 1 5.5 14 7.5 25 6.5 34-25 10-55 10-80 1 1-12 4.5-24 7.5-36z"
+  fill="url(#bGown)" stroke="#5E2A4A" strokeWidth="1.1" strokeLinejoin="round"/>
+<path d="M37 183c6 5 12 5 18 0s12 5 18 0 12 5 17 1" stroke="#FFF6F2" strokeWidth="1.5" opacity=".65"/>
+<path d="M31 217c7 5 14 5 21 0s14 5 21 0 14 5 18 1" stroke="#FFF6F2" strokeWidth="1.5" opacity=".55"/>
+<path d="M25 250c8 5 16 5 24 0s16 5 24 0 15 5 20 1" stroke="#FFF6F2" strokeWidth="1.5" opacity=".45"/>
+<g fill="#FFF6F2" opacity=".5">
+  <circle cx="45" cy="232" r="1.5"/><circle cx="60" cy="238" r="1.5"/>
+  <circle cx="77" cy="232" r="1.5"/><circle cx="52" cy="248" r="1.4"/>
+  <circle cx="70" cy="248" r="1.4"/>
+</g>
+
+{/* NECK — before the chest */}
+<path d="M58.4 62.0h13.2v10c0 4.2-2.8 8-6.6 8s-6.6-3.8-6.6-8z"
+  fill="#EEC2A8"/>
+<path d="M58.4 62.0v10c0 4.2 2.8 8 6.6 8s6.6-3.8 6.6-8v-10"
+  fill="none" stroke="#B5806B" strokeWidth=".9" strokeLinecap="round"/>
+<path d="M59.4 63.5c3.4 4.6 7.8 4.6 11.2 0" fill="none" stroke="#B5806B"
+  strokeWidth=".9" opacity=".45" strokeLinecap="round"/>
+
+{/* chest + shoulders */}
+<path d="M54 73h22c7 4 11.5 11 12.5 20 .7 6.5.5 14-.4 21H41.9c-.9-7-1.1-14.5-.4-21 1-9 5.5-16 12.5-20z"
+  fill="url(#bSkin)" stroke="#B5806B" strokeWidth=".9" strokeLinejoin="round"/>
+<path d="M56 92c5.5 3.5 12.5 3.5 18 0" stroke="#B5806B" strokeWidth=".8" opacity=".3" strokeLinecap="round"/>
+
+{/* sash + bow */}
+<path d="M50 144h30l-1.4 8H51.4z" fill="#C3A4E4" stroke="#9B78C6" strokeWidth=".7" strokeLinejoin="round"/>
+<path d="M65 150c-4.4-6.6-12-8.2-14-3.7-1.8 3.9 3.4 8 8 5.4-4.4 4.4-2.6 8.2 1 7.2 3.7-1.1 5.4-4.8 5-8.9z"
+  fill="#C3A4E4" stroke="#9B78C6" strokeWidth=".8" strokeLinejoin="round"/>
+<path d="M65 150c4.4-6.6 12-8.2 14-3.7 1.8 3.9-3.4 8-8 5.4 4.4 4.4 2.6 8.2-1 7.2-3.7-1.1-5.4-4.8-5-8.9z"
+  fill="#C3A4E4" stroke="#9B78C6" strokeWidth=".8" strokeLinejoin="round"/>
+<circle cx="65" cy="150" r="2.5" fill="#FFF6F2" stroke="#9B78C6" strokeWidth=".6"/>
+
+{/* ARMS */}
+<g>
+  <path d="M48 96c-9 6.5-14.5 17.5-14 31 .4 10.5 3.8 19 9.4 25.6l5.6-4
+    c-4.6-5.8-7.2-12.6-7.4-21.4-.3-10 2.5-18.4 7.6-24.4z"
+    fill="url(#bSkin)" stroke="#B5806B" strokeWidth=".9" strokeLinejoin="round"/>
+  <path d="M43.4 156.6l5.6-4c4 3.4 5.6 7.6 4.2 11.4-1.6 4-6.1 4.8-9.2 1.9-2.5-2.3-2.7-5.9-.6-9.3z"
+    fill="#FBE2D1" stroke="#B5806B" strokeWidth=".9" strokeLinejoin="round"/>
+  <path d="M44.4 120c-2.4 5.6-3.2 11.4-2.6 17.2" stroke="#B5806B" strokeWidth=".8" opacity=".4" strokeLinecap="round"/>
+  <g className="hm-doll-arm">
+    <path d="M82 96c9 6.5 14.5 17.5 14 31-.4 10.5-3.8 19-9.4 25.6l-5.6-4
+      c4.6-5.8 7.2-12.6 7.4-21.4.3-10-2.5-18.4-7.6-24.4z"
+      fill="url(#bSkin)" stroke="#B5806B" strokeWidth=".9" strokeLinejoin="round"/>
+    <path d="M86.6 156.6l-5.6-4c-4 3.4-5.6 7.6-4.2 11.4 1.6 4 6.1 4.8 9.2 1.9 2.5-2.3 2.7-5.9.6-9.3z"
+      fill="#FBE2D1" stroke="#B5806B" strokeWidth=".9" strokeLinejoin="round"/>
+    <path d="M85.6 120c2.4 5.6 3.2 11.4 2.6 17.2" stroke="#B5806B" strokeWidth=".8" opacity=".4" strokeLinecap="round"/>
   </g>
+</g>
 
-  {/* sash + bow */}
-  <path d="M50 176h30l-1.5 7H51z" fill="#C3A4E4"/>
-  <path d="M65 182c-5-7-14-9-16-4s4 9 9 6c-5 5-3 9 1 8 4-1 6-5 6-10z" fill="#C3A4E4" stroke="#9B78C6" strokeWidth=".7" strokeLinejoin="round"/>
-  <path d="M65 182c5-7 14-9 16-4s-4 9-9 6c5 5 3 9-1 8-4-1-6-5-6-10z" fill="#C3A4E4" stroke="#9B78C6" strokeWidth=".7" strokeLinejoin="round"/>
-  <circle cx="65" cy="182" r="2.6" fill="#FFF6F2"/>
+{/* bodice, square neckline */}
+<path d="M48 93c3.5-4 8-6.5 13-7h8c5 .5 9.5 3 13 7 1.2 15-.8 28-4.6 39 1.6 8.4 2.6 16.6 3 25H45.6c.4-8.4 1.4-16.6 3-25-3.8-11-5.8-24-4.6-39z"
+  fill="url(#bBodice)" stroke="#5E2A4A" strokeWidth="1.1" strokeLinejoin="round"/>
+<path d="M61 86.5h8" stroke="#FFF6F2" strokeWidth="1.8" opacity=".55" strokeLinecap="round"/>
+<path d="M65 93v65" stroke="#FFF6F2" strokeWidth=".9" opacity=".32"/>
+<path d="M55 101c-1.4 19-1.2 38 .5 57" stroke="#FFF6F2" strokeWidth=".9" opacity=".3"/>
+<path d="M75 101c1.4 19 1.2 38-.5 57" stroke="#8E4A3C" strokeWidth=".9" opacity=".25"/>
 
-  {/* ARMS (filled, tapered) */}
-  <g>
-    {/* left: hand planted on the hip, opening a real triangle of negative space */}
-    <path d="M54.5 128.5C45 133 39.5 143.5 40 157c.3 8.2 3.8 15.4 10.4 20.6l3.1-4.8
-      C48 168.6 46.2 163.4 46 157c-.3-9.6 3.2-17.6 11.5-22.2z"
-      fill="url(#bSkin)" stroke="#B07A63" strokeWidth=".9" strokeLinejoin="round"/>
-    <path d="M50.4 177.6l3.1-4.8c4.2 2.6 6 6.2 4.3 9-1.7 2.7-5.5 2-7.4-.4z"
-      fill="#F6D2C0" stroke="#B07A63" strokeWidth=".9" strokeLinejoin="round"/>
-    <path d="M48.6 146.6c-2.6 4.6-3.6 9.6-3.2 14.6" stroke="#B07A63" strokeWidth=".8" opacity=".45" strokeLinecap="round"/>
-    <g className="hm-doll-arm">
-      {/* right: hanging with a slight swing */}
-    <path d="M76.5 128.5C84.5 133.5 89.5 143.5 89 157c-.4 9.6-1.7 18.2-3.9 26.2l-6-1.2
-      c2-7.8 3.3-15.6 3.7-25 .4-9.6-3-17.6-10.8-22.2z"
-      fill="url(#bSkin)" stroke="#B07A63" strokeWidth=".9" strokeLinejoin="round"/>
-    <path d="M79.1 182l6 1.2c1.3 4.4.2 9.2-2.7 9.6-2.9.4-4.4-3-4.1-6.4z"
-      fill="#F6D2C0" stroke="#B07A63" strokeWidth=".9" strokeLinejoin="round"/>
-    <path d="M82.4 146.6c2.2 4.7 3 9.8 2.6 15.2" stroke="#B07A63" strokeWidth=".8" opacity=".45" strokeLinecap="round"/>
-    </g>
-  </g>
+{/* flutter cap sleeves */}
+<path d="M59.5 89c-8-1.6-14.5 1.2-18 7.4-2 3.6-.3 7.2 3.5 7.9 3.4.7 5.7-.9 7-3.8 1.8-4.1 4.4-7.4 7.5-9.7z"
+  fill="url(#bSleeve)" stroke="#5E2A4A" strokeWidth="1" strokeLinejoin="round"/>
+<path d="M70.5 89c8-1.6 14.5 1.2 18 7.4 2 3.6.3 7.2-3.5 7.9-3.4.7-5.7-.9-7-3.8-1.8-4.1-4.4-7.4-7.5-9.7z"
+  fill="url(#bSleeve)" stroke="#5E2A4A" strokeWidth="1" strokeLinejoin="round"/>
 
-  {/* bodice, square neckline */}
-  <path d="M55 126h20c3 16 4 34 3 50H52c-1-16 0-34 3-50z" fill="url(#bBodice)" stroke="#5E2A4A" strokeWidth="1.1" strokeLinejoin="round"/>
-  <path d="M65 128v46" stroke="#FFF6F2" strokeWidth="1" opacity=".4"/>
-  <path d="M55 126h20" stroke="#FFF6F2" strokeWidth="1.6" opacity=".6"/>
-  <path d="M58 134c-1 13-1.2 26-.6 39" stroke="#FFF6F2" strokeWidth=".9" opacity=".3"/>
-  <path d="M73 134c1 13 1.2 26 .6 39" stroke="#8E4A3C" strokeWidth=".9" opacity=".25"/>
+<ellipse cx="65.0" cy="46.0" rx="19.0" ry="20.5" fill="url(#bSkin)"
+  stroke="#A56B57" strokeWidth="1.1"/>
+<ellipse cx="56.0" cy="48.0" rx="7" ry="9" fill="#FFF3EA" opacity=".18"/>
+<path d="M46.4 44.5c-2.6-.4-4.4 1.4-4.2 4 .2 2.6 2.2 4.6 4.8 4.8z"
+  fill="#EEC2A8" stroke="#A56B57" strokeWidth=".9" strokeLinejoin="round"/>
+<path d="M83.6 44.5c2.6-.4 4.4 1.4 4.2 4-.2 2.6-2.2 4.6-4.8 4.8z"
+  fill="#EEC2A8" stroke="#A56B57" strokeWidth=".9" strokeLinejoin="round"/>
+<ellipse cx="57.4" cy="49.5" rx="4.6" ry="5.4" fill="#FFFDFB"/>
+<circle cx="57.4" cy="50.0" r="3.5" fill="#573A66"/>
+<circle cx="57.4" cy="50.4" r="1.75" fill="#2A1A33"/>
+<circle cx="56.1" cy="47.9" r="1.45" fill="#FFFFFF"/>
+<circle cx="58.9" cy="51.9" r=".75" fill="#FFFFFF" opacity=".8"/>
+<path d="M52.5 48.1c1-3.2 3-4.8 4.9-4.8s3.9 1.6 4.9 4.8"
+  fill="none" stroke="#2A1A33" strokeWidth="1.35" strokeLinecap="round"/>
+<ellipse cx="57.4" cy="49.5" rx="4.6" ry="5.4" fill="none"
+  stroke="#2A1A33" strokeWidth=".65" opacity=".5"/>
+<ellipse cx="72.6" cy="49.5" rx="4.6" ry="5.4" fill="#FFFDFB"/>
+<circle cx="72.6" cy="50.0" r="3.5" fill="#573A66"/>
+<circle cx="72.6" cy="50.4" r="1.75" fill="#2A1A33"/>
+<circle cx="71.3" cy="47.9" r="1.45" fill="#FFFFFF"/>
+<circle cx="74.1" cy="51.9" r=".75" fill="#FFFFFF" opacity=".8"/>
+<path d="M67.69999999999999 48.1c1-3.2 3-4.8 4.9-4.8s3.9 1.6 4.9 4.8"
+  fill="none" stroke="#2A1A33" strokeWidth="1.35" strokeLinecap="round"/>
+<ellipse cx="72.6" cy="49.5" rx="4.6" ry="5.4" fill="none"
+  stroke="#2A1A33" strokeWidth=".65" opacity=".5"/>
+<path d="M53.1 41.4c1.5-2.2 3.3-3.1 5.2-2.7 1.4.3 2.6 1.2 3.5 2.5"
+  fill="none" stroke="#573A66" strokeWidth="1.15" strokeLinecap="round" opacity=".9"/>
+<path d="M76.89999999999999 41.4c-1.5-2.2-3.3-3.1-5.2-2.7-1.4.3-2.6 1.2-3.5 2.5"
+  fill="none" stroke="#573A66" strokeWidth="1.15" strokeLinecap="round" opacity=".9"/>
+<path d="M64.2 53.4c.8.7 1.6.8 2.4.2" fill="none" stroke="#B5806B"
+  strokeWidth=".9" strokeLinecap="round" opacity=".65"/>
+<path d="M60.8 57.4c1.3 3.4 2.6 5 4.2 5s2.9-1.6 4.2-5c-2.8 1.1-5.6 1.1-8.4 0z"
+  fill="#B4553C" stroke="#B4553C" strokeWidth=".5" strokeLinejoin="round"/>
+<path d="M60.8 57.4c2.8 1.2 5.6 1.2 8.4 0" fill="none" stroke="#E08A6C"
+  strokeWidth="1.5" strokeLinecap="round"/>
+<ellipse cx="51.5" cy="54.5" rx="4.4" ry="2.8" fill="#F4A088" opacity=".42"/>
+<ellipse cx="78.5" cy="54.5" rx="4.4" ry="2.8" fill="#F4A088" opacity=".42"/>
 
-  {/* FLUTTER SLEEVES — drawn after the arms so the joint is always covered.
-       Deliberately angular, unlike A's rounded puff. */}
-  <path d="M59.5 126c-8.5-1.6-16.5 2-19.2 9.4-1 2.8.6 5.6 3.6 5.6 1.8 0 3.2-1 3.8-2.6 1.8-4.8 6-8 11.8-8.4z"
-    fill="url(#bSleeve)" stroke="#5E2A4A" strokeWidth="1" strokeLinejoin="round"/>
-  <path d="M70.5 126c8.5-1.6 16.5 2 19.2 9.4 1 2.8-.6 5.6-3.6 5.6-1.8 0-3.2-1-3.8-2.6-1.8-4.8-6-8-11.8-8.4z"
-    fill="url(#bSleeve)" stroke="#5E2A4A" strokeWidth="1" strokeLinejoin="round"/>
-  <path d="M50 131c-3.2 2-5.2 4.6-6 7.4" stroke="#FFF6F2" strokeWidth=".9" opacity=".5" strokeLinecap="round"/>
-  <path d="M80 131c3.2 2 5.2 4.6 6 7.4" stroke="#FFF6F2" strokeWidth=".9" opacity=".45" strokeLinecap="round"/>
+{/* hair: swept-back crown into a high chignon */}
+<path d="M65 18c16 0 23.5 11 22.5 27-.2 3.8-.8 6.8-1.6 9.4-1.2-7-2.2-12.8-3.3-17.6
+  -5.2-4.2-10.7-6.3-17.6-6.3s-12.4 2.1-17.6 6.3c-1.1 4.8-2.1 10.6-3.3 17.6
+  -.8-2.6-1.4-5.6-1.6-9.4C41.5 29 49 18 65 18z"
+  fill="url(#bHair)" stroke="#2A1A33" strokeWidth="1.1" strokeLinejoin="round"/>
+<path d="M50 30c4.6-4.2 9.8-6.3 15-6.5" stroke="#9B78C6" strokeWidth="1" strokeLinecap="round" opacity=".5"/>
+<path d="M80 30c-4.6-4.2-9.8-6.3-15-6.5" stroke="#9B78C6" strokeWidth="1" strokeLinecap="round" opacity=".4"/>
+<path d="M55 21c5-4.5 15-4.5 20 0-3 3.6-7 5.2-10 5.2S58 24.6 55 21z" fill="#3B2647" opacity=".85"/>
+<ellipse cx="65" cy="10.5" rx="13.5" ry="10.5" fill="url(#bHair)" stroke="#2A1A33" strokeWidth="1.1"/>
+<path d="M56.5 6.5c5-3.6 12-3.8 17 0" stroke="#9B78C6" strokeWidth="1.3" strokeLinecap="round" opacity=".5"/>
+<path d="M55.5 14c5.5 3.6 14 3.6 19 0" stroke="#9B78C6" strokeWidth="1" strokeLinecap="round" opacity=".35"/>
+<path d="M45.6 44c-3.4 9.5-4.2 19.4-2.4 29.2.5 2.6 3.5 2.4 3.4-.3-.3-9.6.8-18.6 3-27z"
+  fill="url(#bHair)" stroke="#2A1A33" strokeWidth=".9" strokeLinejoin="round"/>
+<path d="M84.4 44c3.4 9.5 4.2 19.4 2.4 29.2-.5 2.6-3.5 2.4-3.4-.3.3-9.6-.8-18.6-3-27z"
+  fill="url(#bHair)" stroke="#2A1A33" strokeWidth=".9" strokeLinejoin="round"/>
 
-  {/* neck */}
-  <path d="M61 108h8v16c0 3-8 3-8 0z" fill="#E7B9A2" stroke="#B07A63" strokeWidth=".9"/>
-  <path d="M61.4 112c2.4 3 5.6 3.4 7.9 1.8" stroke="#B07A63" strokeWidth=".8" opacity=".5"/>
-
-  {/* head, chin lifted, turned three-quarter right */}
-  <path d="M65 74c9.6 0 15.6 8 15.6 18.5 0 6.6-1.7 11.9-5 15.7-3 3.4-6.8 5.2-11.6 5.2-9.2 0-15.2-8.7-15.2-19.4S55.4 74 65 74z"
-    fill="url(#bSkin)" stroke="#5E2A4A" strokeWidth="1.1"/>
-  {/* face on the open cheek */}
-  <path d="M72.4 92c2.2.4 3.8 1.6 4.6 3.3" stroke="#573A66" strokeWidth="1.3" strokeLinecap="round" opacity=".8"/>
-  <path d="M72.8 99c1.8.3 3.2.9 4.2 1.8" stroke="#33203A" strokeWidth="1.1" strokeLinecap="round" opacity=".7"/>
-  <path d="M73.6 106c1.6.6 3 .5 4.2-.4" stroke="#C4735C" strokeWidth="1.5" strokeLinecap="round"/>
-  <ellipse cx="70.5" cy="102.5" rx="3.4" ry="2.2" fill="#F4A088" opacity=".35"/>
-  <path d="M79.4 95.5c1.6 1.4 1.6 3.6 0 5" stroke="#B07A63" strokeWidth=".9" opacity=".55" strokeLinecap="round"/>
-
-  {/* hair: high chignon, wrapped base, blunt fringe swept left, one loose strand */}
-  <path d="M51.5 100C48.5 79 55 69.5 65 69.5c10.5 0 17.2 8.5 15.4 21-1.5-9-6.8-13-13.4-12.3-5.7.6-10.6 5.8-12 13.8-.5 3-.7 6.5-.3 10z"
-    fill="url(#bHair)" stroke="#33203A" strokeWidth="1.1" strokeLinejoin="round"/>
-  <ellipse cx="73" cy="63.5" rx="10.5" ry="8.5" fill="url(#bHair)" stroke="#33203A" strokeWidth="1"/>
-  <path d="M63 70.5c3.5-3.5 9-4.5 13.5-2.5" stroke="#9B78C6" strokeWidth="1.4" strokeLinecap="round" opacity=".55"/>
-  <path d="M66 59c4-2.5 9-2 12 1.5" stroke="#9B78C6" strokeWidth="1.2" strokeLinecap="round" opacity=".4"/>
-  <path d="M60 72.5c4-3 8.5-3.5 12.5-1.5" stroke="#33203A" strokeWidth="2.6" strokeLinecap="round" opacity=".8"/>
-  <path d="M53.5 96c-3.5 12-2.8 24 2 34" stroke="url(#bHair)" strokeWidth="3.6" strokeLinecap="round"/>
-  <path d="M55 98c-2.6 10-2 19.6 1.6 27.6" stroke="#9B78C6" strokeWidth="1" strokeLinecap="round" opacity=".4"/>
-  <g>
-    <circle cx="82" cy="60" r="2.6" fill="#F4A088"/>
-    <circle cx="86" cy="63.5" r="2.2" fill="#FBC4AE"/>
-    <circle cx="84" cy="56" r="2" fill="#F4A088"/>
-    <circle cx="83.8" cy="60" r="1.2" fill="#FFF6F2"/>
-  </g>
+{/* coral bloom */}
+<g>
+  <circle cx="80" cy="8" r="3.1" fill="#F4A088"/>
+  <circle cx="85" cy="11.6" r="2.7" fill="#FBC4AE"/>
+  <circle cx="82.6" cy="3" r="2.4" fill="#F4A088"/>
+  <circle cx="86.6" cy="6" r="2.2" fill="#FBC4AE"/>
+  <circle cx="82.8" cy="7.6" r="1.4" fill="#FFF6F2"/>
+</g>
     </svg>
   );
 }
@@ -3199,8 +3306,8 @@ const CSS = `
   /* Sized up from the original clamp(58px,9vw,124px) — the outline strokes
      added to the redesign need room to resolve; too small and even a
      detailed path reads as a soft blob. */
-  width:clamp(74px,10vw,148px);
-  opacity:.92;
+  width:clamp(118px,13.5vw,216px);
+  opacity:.96;
   will-change:transform;
 }
 .hm-doll-slot-l{left:1.5%;}
@@ -3225,8 +3332,8 @@ const CSS = `
 /* The pivot is the shoulder joint in viewBox units — NOT the fill-box corner,
    which landed on the hand end and swung the arm off the body. The sleeve cap
    is painted after the arm, so the joint stays covered through the whole swing. */
-.hm-doll-a .hm-doll-arm{transform-origin:80px 132px;}
-.hm-doll-b .hm-doll-arm{transform-origin:76.5px 130px;}
+.hm-doll-a .hm-doll-arm{transform-origin:82px 95px;}
+.hm-doll-b .hm-doll-arm{transform-origin:82px 97px;}
 @keyframes dollArm{0%,100%{transform:rotate(-1.6deg);}50%{transform:rotate(3.4deg);}}
 
 /* one-shot greeting when the section arrives */
@@ -3245,19 +3352,19 @@ const CSS = `
 .hm-dolls-flank .hm-doll-slot{bottom:auto;top:14%;}
 .hm-dolls-corner .hm-doll-slot-l{bottom:2%;left:0.5%;}
 .hm-dolls-corner .hm-doll-slot-r{bottom:2%;right:0.5%;}
-.hm-dolls-frame .hm-doll-slot{top:22%;width:clamp(66px,8.5vw,126px);}
-.hm-dolls-gate .hm-doll-slot{bottom:4%;opacity:.75;}
-.hm-dolls-footer .hm-doll-slot{bottom:12%;opacity:.8;}
+.hm-dolls-frame .hm-doll-slot{top:22%;width:clamp(102px,11.5vw,186px);}
+.hm-dolls-gate .hm-doll-slot{bottom:4%;opacity:.88;}
+.hm-dolls-footer .hm-doll-slot{bottom:12%;opacity:.92;}
 .hm-dolls-hero .hm-doll-slot{top:16%;}
 
 /* MOBILE: they scale down and tuck to the very edges, never cropped, never
    hidden. Below 520px they sit lower so they frame rather than crowd. */
 @media (max-width:900px){
-  .hm-doll-slot{width:clamp(60px,13vw,96px);opacity:.85;}
+  .hm-doll-slot{width:clamp(104px,18vw,156px);opacity:.94;}
   .hm-dolls-flank .hm-doll-slot{top:8%;}
 }
 @media (max-width:520px){
-  .hm-doll-slot{width:clamp(54px,16vw,80px);opacity:.78;}
+  .hm-doll-slot{width:clamp(96px,27vw,138px);opacity:.85;}
   .hm-doll-slot-l{left:-1%;}
   .hm-doll-slot-r{right:-1%;}
   .hm-dolls-flank .hm-doll-slot{top:4%;}
